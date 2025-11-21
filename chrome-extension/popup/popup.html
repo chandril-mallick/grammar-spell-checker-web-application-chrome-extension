@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar & Spell Checker</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="popup-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>✓ Grammar Checker</h1>
+            <p>Quick text correction</p>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <label for="inputText">Enter your text:</label>
+            <textarea id="inputText" placeholder="Type or paste your text here..." maxlength="2500"></textarea>
+            <div class="char-counter" id="charCounter">0 / 2000 characters</div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button id="correctBtn" class="btn btn-primary">
+                    <span class="spinner" id="spinner"></span>
+                    ✓ Correct Text
+                </button>
+                <button id="clearBtn" class="btn btn-secondary">✕ Clear</button>
+            </div>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-section" id="outputSection">
+            <div class="output-card">
+                <h5>Original Text</h5>
+                <div class="content" id="originalText"></div>
+            </div>
+
+            <div class="output-card">
+                <h5>Corrected Text</h5>
+                <div class="content" id="correctedText"></div>
+            </div>
+
+            <div class="output-card">
+                <h5>Changes</h5>
+                <div class="content diff-view" id="diffView"></div>
+            </div>
+
+            <button id="copyBtn" class="btn btn-copy">📋 Copy Corrected Text</button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <a href="../options/options.html" target="_blank" class="settings-link">⚙️ Settings</a>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

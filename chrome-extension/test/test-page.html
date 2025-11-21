@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Checker - Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            color: #667eea;
+        }
+
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        textarea,
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contenteditable-div {
+            width: 100%;
+            min-height: 120px;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .info {
+            background: #e7ecff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>✓ Grammar Checker Extension - Test Page</h1>
+
+    <div class="info">
+        <strong>Instructions:</strong> Click on any text field below and you should see the floating "✓ Check" button
+        appear.
+        Try typing text with errors like "I has a dreamm" to test the grammar checker!
+    </div>
+
+    <div class="test-section">
+        <h3>Test 1: Regular Textarea</h3>
+        <label for="test1">Try typing: "I has a dreamm and I wants too metting tommorow"</label>
+        <textarea id="test1" placeholder="Click here and start typing..."></textarea>
+    </div>
+
+    <div class="test-section">
+        <h3>Test 2: Text Input</h3>
+        <label for="test2">Try typing: "Lets recieve teh package becuase its important"</label>
+        <input type="text" id="test2" placeholder="Click here and start typing...">
+    </div>
+
+    <div class="test-section">
+        <h3>Test 3: ContentEditable Div</h3>
+        <label>Try typing: "He have a sucessful carrer and he are very smart"</label>
+        <div class="contenteditable-div" contenteditable="true">Click here and start typing...</div>
+    </div>
+
+    <div class="test-section">
+        <h3>Test Examples:</h3>
+        <ul>
+            <li><strong>Spelling errors:</strong> "teh", "recieve", "tommorow", "metting", "dreamm"</li>
+            <li><strong>Grammar errors:</strong> "I has", "he are", "he have"</li>
+            <li><strong>Article errors:</strong> "a apple" (should be "an apple")</li>
+        </ul>
+    </div>
+</body>
+
+</html>

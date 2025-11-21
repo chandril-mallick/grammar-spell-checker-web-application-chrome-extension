@@ -1,0 +1,238 @@
+/**
+ * Styles for Content Script UI Elements
+ */
+
+/* Floating Check Button */
+.grammar-check-btn {
+  position: absolute;
+  z-index: 999998;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.grammar-check-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.grammar-check-btn:active {
+  transform: translateY(0);
+}
+
+/* Correction Panel */
+.grammar-correction-panel {
+  position: absolute;
+  z-index: 999999;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.grammar-panel-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grammar-panel-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.grammar-panel-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.grammar-panel-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.grammar-panel-content {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.grammar-result-section {
+  margin-bottom: 20px;
+}
+
+.grammar-result-section h5 {
+  color: #667eea;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.grammar-result-section>div {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.grammar-result-diff {
+  font-family: 'Courier New', monospace;
+}
+
+/* Diff highlighting */
+.diff-removed {
+  background-color: #ffebe9;
+  color: #d73a49;
+  text-decoration: line-through;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin: 0 2px;
+}
+
+.diff-added {
+  background-color: #e6ffec;
+  color: #22863a;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin: 0 2px;
+}
+
+.grammar-panel-footer {
+  padding: 16px 20px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.grammar-panel-footer button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.grammar-panel-apply {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.grammar-panel-apply:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.grammar-panel-cancel {
+  background: #6c757d;
+  color: white;
+}
+
+.grammar-panel-cancel:hover {
+  background: #5a6268;
+}
+
+/* Error Indicator (Auto-Detection) */
+.grammar-error-indicator {
+  position: absolute;
+  z-index: 999997;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(245, 87, 108, 0.3);
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s ease-out;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grammar-error-indicator .error-count {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.grammar-error-indicator .error-fix-btn {
+  background: white;
+  color: #f5576c;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 12px;
+}
+
+.grammar-error-indicator .error-fix-btn:hover {
+  background: #fff5f7;
+  transform: scale(1.05);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .grammar-correction-panel {
+    background: #2d3748;
+    color: #e2e8f0;
+  }
+
+  .grammar-result-section>div {
+    background: #1a202c;
+    color: #e2e8f0;
+  }
+
+  .grammar-panel-footer {
+    border-top-color: #4a5568;
+  }
+}

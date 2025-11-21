@@ -1,0 +1,256 @@
+/**
+ * Popup Styles - Matching the web app design
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 450px;
+    min-height: 500px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.popup-container {
+    background: white;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* Input Section */
+.input-section {
+    padding: 20px;
+    flex: 1;
+}
+
+.input-section label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.char-counter {
+    text-align: right;
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+.char-counter.over-limit {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.btn-copy {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-copy:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.spinner {
+    display: none;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Output Section */
+.output-section {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #e9ecef;
+    background: #f8f9fa;
+}
+
+.output-card {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-left: 3px solid #667eea;
+}
+
+.output-card h5 {
+    color: #667eea;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.output-card .content {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.diff-view {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
+
+/* Diff highlighting */
+.diff-removed {
+    background-color: #ffebe9;
+    color: #d73a49;
+    text-decoration: line-through;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin: 0 2px;
+}
+
+.diff-added {
+    background-color: #e6ffec;
+    color: #22863a;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin: 0 2px;
+}
+
+/* Footer */
+.footer {
+    padding: 12px 20px;
+    text-align: center;
+    border-top: 1px solid #e9ecef;
+}
+
+.settings-link {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.settings-link:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
