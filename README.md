@@ -4,13 +4,13 @@ A Flask-based web application that provides intelligent grammar and spell checki
 
 ## Features
 
-- ✨ **Spell Correction**: Automatic spell checking using TextBlob
-- 📝 **Grammar Correction**: Advanced grammar checking with LanguageTool
-- 🚦 **Rate Limiting**: Built-in IP-based rate limiting (10 requests per 60 seconds)
-- 📏 **Text Validation**: Maximum text length of 2000 characters
-- 🎨 **Modern UI**: Clean Bootstrap 5 interface with real-time character counter
-- 🔄 **Real-time Processing**: Instant correction results
-- 🛡️ **Error Handling**: Comprehensive error handling and user feedback
+-  **Spell Correction**: Automatic spell checking using TextBlob
+- **Grammar Correction**: Advanced grammar checking with LanguageTool
+-  **Rate Limiting**: Built-in IP-based rate limiting (10 requests per 60 seconds)
+-  **Text Validation**: Maximum text length of 2000 characters
+-  **Modern UI**: Clean Bootstrap 5 interface with real-time character counter
+-  **Real-time Processing**: Instant correction results
+-  **Error Handling**: Comprehensive error handling and user feedback
 
 ## Prerequisites
 
